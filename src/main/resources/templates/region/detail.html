@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout/main}">
+
+<head>
+    <title>Detail Region</title>
+</head>
+
+<body>
+    <section class="container" layout:fragment="content">
+        <div class="card mt-5">
+            <h5 class="card-header fw-bold text-center">DETAIL REGION</h5>
+            <div class="card-body" th:object="${region}">
+                <div class="mb-3">
+                    <label for="region-id" class="form-label fw-bold">Id</label>
+                    <input type="text" id="region-id" class="form-control" disabled th:field="*{id}" />
+                </div>
+
+                <div class="mb-3">
+                    <label for="region-name" class="form-label fw-bold">Name</label>
+                    <input type="text" id="region-name" class="form-control" disabled th:field="*{name}" />
+                </div>
+
+                <a th:href="@{/region}" class="btn btn-dark mt-3">Back</a>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
